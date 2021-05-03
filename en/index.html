@@ -12,6 +12,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   <link rel="alternate" hreflang="en" href="index.html">
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
   
   
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -28,7 +30,11 @@
   window.onload = function() {
     document.getElementsByClassName("play-video")[0].addEventListener("click", (e) => {
       window.location.href = "index.html";
-    })
+    });
+
+    document.getElementById("share").addEventListener("click", () => {
+      swal("Success!", "Your story has been shared with us.", "success");
+    });
   }
 </script>
 <style>
@@ -94,6 +100,7 @@
 
   
 </style>
+
 
 
 <body class="js-byrefresh js-no-ajax    en-language">
@@ -669,9 +676,13 @@
 <section data-js-scroll-section data-intersect>
   <div class="team-gallery-wrapper" data-inner-section data-menu-index="2">
   <div class="row expanded">
-    <div class="xxlarge-16 columns text-center">
-      <span class="upper-title" data-type-letter-spacing style="font-family: MatterBold; font-weight: bold;">Migrant Stories</span>
-    </div>
+    <div class="xxlarge-16 columns text-center align-center">
+      <span class="upper-title" data-type-letter-spacing style="font-family: MatterBold; font-weight: bold;">SHARE YOUR STORY</span>
+        <input style="margin-top: 12px; width: 50%; padding: 12px; border: none;" type="text" placeholder="Enter your name"><br>
+        <textarea style="margin-top: 12px; width: 50%; padding: 12px; border: none;" placeholder="Enter your story"></textarea><br>
+          <button class="button" id="share">SHARE STORY</button>
+        
+     </div>
   </div>
 
   <div class="row expanded gallery-wrapper">
